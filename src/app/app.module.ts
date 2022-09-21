@@ -7,11 +7,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CVComponent } from './Pages/cv/cv.component';
+import { CompTechComponent } from './Pages/comp-tech/comp-tech.component';
+import { ExpProComponent } from './Pages/exp-pro/exp-pro.component';
+import { EtudesComponent } from './Pages/etudes/etudes.component';
+import { ContactComponent } from './Pages/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    CVComponent,
+    CompTechComponent,
+    ExpProComponent,
+    EtudesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
