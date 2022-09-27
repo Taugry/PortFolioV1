@@ -12,6 +12,7 @@ import { CompTechComponent } from './Pages/comp-tech/comp-tech.component';
 import { ExpProComponent } from './Pages/exp-pro/exp-pro.component';
 import { EtudesComponent } from './Pages/etudes/etudes.component';
 import { ContactComponent } from './Pages/contact/contact.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ContactComponent } from './Pages/contact/contact.component';
     AppRoutingModule,
     MatSliderModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

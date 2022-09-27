@@ -1,1 +1,9 @@
-<p>cv works!</p>
+<div class="h-100 w-100 d-flex">
+  <!-- <pdf-viewer [src]="src" [zoom]="1" [zoom-scale]="'page-height'" class="col-12"></pdf-viewer> -->
+  <div style="position: absolute; z-index: 10; padding: 10px;" class="col-2">
+    <button class="cyberpunk2077" style="width: 100%; text-decoration: none;" (click)="DLClick()" >Telecharger CV</button>
+  </div>
+  <pdf-viewer [src]="src" [rotation]="0" [original-size]="false" [show-all]="true" [fit-to-page]="true"
+    [stick-to-page]="false" [render-text]="true" [external-link-target]="'blank'" [autoresize]="true" [zoom]="1"
+    [zoom-scale]="'page-height'" [show-borders]="false" class="col-12 h-100"></pdf-viewer>
+</div>

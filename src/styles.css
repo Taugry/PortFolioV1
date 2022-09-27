@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
+/* html,
 body {
   height: 100%;
 }
@@ -10,4 +10,136 @@ body {
   background-color: #ab00ff;
   background-image: linear-gradient(225deg, #ab00ff 0%, #4158d0 72%, #70fff7 100%);
 
+} */
+:root {
+  --red: rgba(211, 87, 91, 0.81);
+  --red-glow: rgba(211, 87, 91, 0.91);
+  --red-scanline: rgba(204, 94, 98, 0.2);
+  --black-scanline: rgba(1, 1, 1, 0.9);
+  --black-hover-background: rgba(0, 0, 0, 0.25);
+  --blue: #61e4fa;
+  --yellow: #f7f500;
+  --text-shadow: rgb(0, 208, 255);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100vh;
+  display: block;
+  font-family: "GinesoSoft-ConMed";
+}
+
+body {
+  background-color: #ab00ff;
+  background-image: linear-gradient(225deg, #ab00ff 0%, #4158d0 72%, #70fff7 100%);
+}
+
+.logo {
+  font-family: "Cyberpunk";
+  color: var(--yellow);
+  text-align: center;
+  font-size: 42px;
+  text-shadow: var(--text-shadow) 2px 3px 0px;
+  line-height: 1.5;
+}
+
+.sublogo {
+  font-family: "GinesoSoft-ConMed";
+  font-size: 30px;
+  color: var(--text-shadow);
+  text-shadow: none;
+  text-align: right;
+  padding-right: 50px;
+}
+
+.menu {
+  display: inline-block;
+  width: 300px;
+  height: 100%;
+  background: repeating-linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--red-scanline) 1px,
+      var(--red-scanline) 3px,
+      var(--red-scanline) 5px,
+      var(--red-scanline) 4px,
+      transparent 0.5%
+    ),
+    repeating-linear-gradient(
+      to left,
+      var(--black-scanline) 100%,
+      var(--black-scanline) 100%
+    );
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0px 25px;
+}
+
+.menu ul li {
+  text-transform: uppercase;
+  cursor: pointer;
+  /* layout */
+  position: relative;
+  padding: 10px;
+  margin: 15px 0px;
+  overflow: hidden;
+  width: 250px;
+  height: 54.5px;
+  /* clip-path: polygon(250px 0px, 250px 37px, 233px 54px, 0px 54px, 0px 0px); */
+  clip-path: polygon(250px 1px, 249px 37px, 232px 54px, 0px 54px, 0px 0px);
+
+
+  /* font */
+  color: var(--red);
+  font-size: 26px;
+  text-shadow: 0px 0px 3px var(--red-glow);
+
+  /* Border */
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
+  /* Animation */
+  transition: color 1s ease-out;
+  transition: border-color 1s ease-out;
+}
+
+.menu ul li::after {
+  /* Layout */
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  right: -17px;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+
+  /* Border */
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+
+  /* Animation */
+  transition: color 1s ease-out;
+  transition: border-color 1s ease-out;
+}
+
+.menu ul li:hover::after,
+.menu ul li:hover {
+  color: var(--blue);
+  background: var(--black-hover-background);
+
+  border-color: var(--blue);
+
+  transition: color 0.23s linear;
+  transition: border-color 0.23s linear;
+}
+pdf-viewer > .ng2-pdf-viewer-container > .pdfViewer > .page {
+  margin-bottom: 0 !important;
 }
